@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .container {
+        max-width: 700px;
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        border-radius: 15px;
+      }
+      h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 30px;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      label {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+        accent-color: #007bff;
+      }
+      select,
+      textarea,
+      input[type="submit"] {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 100%;
+      }
+      textarea {
+        resize: vertical;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Formulário de avaliação do trabalho</h2>
+      <form>
+        <div class="flex-row">
+          <label for="satisfaction"
+            >O quão você está satisfeito(a) com seu trabalho?</label
+          >
+          <select id="satisfaction" name="satisfaction">
+            <option value="very_satisfied">Muito satisfeito</option>
+            <option value="satisfied">Satisfeito</option>
+            <option value="neutral">Neutro</option>
+            <option value="unsatisfied">Insatisfeito</option>
+            <option value="very_unsatisfied">Muito insatisfeito</option>
+          </select>
+        </div>
+        <div class="flex-row">
+          <label>Qual situação ruim você está passando no trabalho?</label>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="usage" value="daily" /> Assédio Moral</label
+            >
+            <label
+              ><input type="radio" name="usage" value="weekly" /> Discriminação</label
+            >
+            <label
+              ><input type="radio" name="usage" value="monthly" />
+              Trabalho análogo ao escravo</label
+            >
+            <label
+              ><input type="radio" name="usage" value="rarely" /> Trabalho infantil</label
+            >
+            <label
+              ><input type="radio" name="usage" value="rarely" /> Outro</label
+            >
+            <label
+              ><input type="radio" name="usage" value="rarely" /> Nenhuma</label
+            >
+          </div>
+        </div>
+        <div class="flex-row">
+          <label for="improvements">Se você está passando por uma situação difícil no trabalho, conte detalhes:</label>
+          <textarea id="improvements" name="improvements" rows="4"></textarea>
+        </div>
+        <div class="flex-row">
+          <label for="improvements">O que precisa melhorar no seu trabalho?</label>
+          <textarea id="improvements" name="improvements" rows="4"></textarea>
+        </div>
+        <h3>Contatos para denúncia:</h3>
+        <a href="https://mpt.mp.br/pgt/servicos/servico-denuncie">Denunciar no site do MPT</a> <br> <br>
+        <a href="https://www.gov.br/pt-br/servicos/realizar-denuncia-trabalhista#:~:text=O%20interessado%20ter%C3%A1%20que%20acessar,a%20uma%20ag%C3%AAncia%20do%20trabalho.">Pelo gov.br</a>
+        <p>Disque denúncia: 158</p>
+        <div class="flex-row">
+          <input type="submit" value="Enviar formulário" />
+        </div>
+        
+      </form>
+    </div>
+  </body>
+</html>
